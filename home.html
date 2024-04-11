@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IMM 2024 Grad Show</title>
+
+    <!-- for Google -->
+    <meta name="description" content Immerse yourself in a cyberpunk spectacle curated by the graduates of Sheridan
+        College's Interactive Media Management, navigating a 3D world that blends technology with creativity, connecting
+        with visionary creators at every turn." />
+    <meta name="keywords" content="Technology, Design, IMM, Sheridan College, Graduate Show" />
+    <meta name="author" content="Sheridan Interactive Media Management" />
+
+    <!-- for Facebook -->
+    <meta property="og:title" content="Sheridan College's Interactive Media Management Grad Show 2024" />
+    <meta property="og:url" content="http://sheridanimm.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content Immerse yourself in a cyberpunk spectacle curated by the graduates of
+        Sheridan College's Interactive Media Management, navigating a 3D world that blends technology with creativity,
+        connecting with visionary creators at every turn." />
+    <meta property="og:image" content="http://sheridanimm.com/img/facebookbanner.jpg" />
+    <!-- Facebook recommended: 1200 x 630 - ideal: 1200 x 1200 square image -->
+
+    <!-- for Twitter -->
+    <meta name="twitter:card" content="Sheridan College's Interactive Media Management Grad Show 2024" />
+    <meta name="twitter:title" content="Sheridan College's Interactive Media Management Grad Show" />
+    <meta name="twitter:description" content Immerse yourself in a cyberpunk spectacle curated by the graduates of
+        Sheridan College's Interactive Media Management, navigating a 3D world that blends technology with creativity,
+        connecting with visionary creators at every turn." />
+    <meta name="twitter:url" content="http://sheridanimm.com/" />
+    <meta name="twitter:image" content="http://sheridanimm.com/img/twitterbanner.jpg" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <meta charset="utf-8" />
+    <title>ZIM - - Code Creativity</title>
+    <script type="module">
+
+        import zim from "https://zimjs.org/cdn/016/zim";
+
+        const assets = ["2024.svg", "bg.png", "Coming.svg", "IMM.svg", "part1.svg", "part2.svg", "Soon.svg", "glitch1.svg", "glitch2.svg", "Glitch-Max.svg"];
+        const path = "assets/";
+
+
+        new Frame("portrait", 2000, 800, clear, clear, ready, assets, path);
+        function ready() {
+            // Given F, S, W, H or frame, stage, stageW, stageH
+            let size1 = 1;
+            let size2 = 0.5;
+            let size3 = 2;
+            new Rectangle(W, H, black).center().alp(0.2)
+            const particles3 = new SVG("").centerReg().siz(W, H).alp(0.8).addTo();
+            const particles2 = new SVG("").centerReg().siz(W, H).mov(0, -10).alp(0.8).addTo();
+
+            const year0 = new SVG("2024.svg").sca(size2).pos(0, 220, CENTER, BOTTOM).mov(0, -10).alp(0.5);
+            const year = new SVG("2024.svg").sca(size2).pos(0, 220, CENTER, BOTTOM);
+
+            const imm0 = new SVG("IMM.svg").centerReg().sca(0, 2).center().mov(0, -10).alp(0.9).mov(0,-100);
+            const imm = new SVG("IMM.svg").sca(size1).center().mov(0,-100);
+
+
+            const particles1 = new SVG("").centerReg().alp(0.8).addTo();
+
+            S.update();
+            const parallax = new Parallax([
+                { obj: particles1, prop: "x", propChange: 200 },
+                { obj: particles2, prop: "x", propChange: 50 },
+                { obj: particles3, prop: "x", propChange: 50 },
+
+                { obj: imm0, prop: "x", propChange: 100 },
+                { obj: imm, prop: "y", propChange: 10, },
+
+
+                { obj: year0, prop: "x", propChange: 20 },
+                { obj: year, prop: "y", propChange: 10, },
+
+                { obj: particles1, prop: "y", propChange: 100, input: "mouseY" },
+                { obj: particles2, prop: "y", propChange: 50, input: "mouseY" },
+                { obj: particles3, prop: "y", propChange: 50, input: "mouseY" },
+
+                { obj: imm0, prop: "y", propChange: 20, input: "mouseY" },
+                { obj: imm, prop: "x", propChange: 30, input: "mouseY" },
+
+
+
+                { obj: year0, prop: "y", propChange: 20, input: "mouseY" },
+                { obj: year, prop: "x", propChange: 10, input: "mouseY" },
+
+            ])
+
+
+
+        } // end ready
+    </script>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" href="styles.css">
+
+    <script defer>
+        function selectProfile(name, role, desc, path) {
+            localStorage.setItem('profileInfo', JSON.stringify({ name, role, desc, path }));
+            window.location.href = 'profile.html'; // Make sure this is the correct path to your profile.html file
+        }
+    </script>
+</head>
+<style>
+    #portrait {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(9px);
+        -webkit-backdrop-filter: blur(9px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        height: 100vh;
+
+    }
+
+    /* or make responsive with %
+        #portrait {width:50%;} */
+    #portraitCanvas {
+        width: 100%;
+        height: 100vh;
+
+    }
+</style>
+
+<body>
+
+    <main class="back">
+        <canvas id="portrait"></canvas>
+
+        <div>
+            <section id="faces">
+                <div class="resize">
+                    <div class="circle">
+                        <img src="assets/portraits/Alexis.jpg" alt="">
+                        <img onclick="selectProfile('Amruta Vaze', 'UX Researcher', '9yrs in instructional design...', 'assets/portraits/Amruta Vaze.jpg')"
+                            src="assets/portraits/Amruta Vaze.jpg" alt>
+                        <img src="assets/portraits/Anitha N.jpg" alt>
+                        <img src="assets/portraits/Ashley.jpg" alt="">
+                        <img src="assets/portraits/BEULA EVANGELIN.jpg" alt>
+                        <img src="assets/portraits/Bill C.jpg" alt>
+                        <img src="assets/portraits/Casey.jpg" alt="">
+                        <img src="assets/portraits/ChaiRay Huo.jpg" alt>
+                        <img src="assets/portraits/Chirag Taluja.jpeg" alt>
+                        <img src="assets/portraits/Gloria Cao.JPG" alt="">
+                        <img src="assets/portraits/Lifei Zhou.jpeg" alt>
+                        <img src="assets/portraits/Maha Al Batal.jpg" alt>
+                        <img src="assets/portraits/Sai Kumar Gottapu.jpg" alt>
+                        <img src="assets/portraits/Sanchita Sharma.jpg" alt>
+                        <img src="assets/portraits/Siyeong Jeong.jpg" alt>
+                        <img src="assets/portraits/Sonia.jpg" alt="">
+                        <img src="assets/portraits/Srivatsan Rangarajan.jpg" alt="">
+                        <img src="assets/portraits/wan wan.jpg" alt>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
