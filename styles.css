@@ -35,8 +35,8 @@ h1{
 }
 
 #faces {
-  width: 100%;
-  display: inline;
+  width: 100px;
+  /* display: grid; */
   text-align: center;
 }
 
@@ -47,7 +47,42 @@ h1{
 .resize img {
   margin-bottom: 80px;
   margin: 20px;
-  width: 10%;
+  width: 100px;
+}
+
+.circle {
+  /* display: grid;
+  column-gap: 25px;
+  row-gap: 25px; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.profile1{
+  display: grid;
+  column-gap: 25px;
+  row-gap: 25px;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.profile2{
+  display: grid;
+  column-gap: 25px;
+  row-gap: 25px;
+  grid-row-start: 4;
+  grid-row-end: 6;
+  grid-template-columns: 50px 40px 40px 50px;
+}
+
+.profile3{
+  grid-row-start: 7;
+  grid-row-end: 9;
+}
+.profile4{
+  grid-row-start: 10;
+  grid-row-end: 12;
 }
 
 .circle img {
