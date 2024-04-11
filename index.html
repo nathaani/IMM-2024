@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profiles List</title>
+    <script defer>
+        function selectProfile(name, role, desc) {
+            localStorage.setItem('profileInfo', JSON.stringify({name, role, desc}));
+            window.location.href = 'profile.html'; // Make sure this is the correct path to your profile.html file
+        }
+    </script>
+</head>
+<body>
+    <h1>Profile Selection</h1>
+    <ul>
+        <!-- Sample profiles, add or edit as needed -->
+        <li onclick="selectProfile('John Doe', 'UX Researcher', '9yrs in instructional design...')">John Doe</li>
+        <li onclick="selectProfile('Jane Smith', 'UI Designer', 'Specialist in mobile app design...')">Jane Smith</li>
+        <li onclick="selectProfile('Alex Johnson', 'Frontend Developer', 'Expert in React and Vue...')">Alex Johnson</li>
+        <li onclick="selectProfile('Sarah Thompson', 'Backend Developer', 'Proficient in Python and Java...')">Sarah Thompson</li>
+        <li onclick="selectProfile('Michael Brown', 'Data Scientist', 'Experience in machine learning...')">Michael Brown</li>
+        <li onclick="selectProfile('Emily Davis', 'Full Stack Developer', 'Skilled in HTML, CSS, and JavaScript...')">Emily Davis</li>
+        <li onclick="selectProfile('David Wilson', 'Software Engineer', 'Passionate about clean code...')">David Wilson</li>
+        <li onclick="selectProfile('Olivia Martinez', 'Product Manager', 'Expert in Agile methodologies...')">Olivia Martinez</li>
+        <li onclick="selectProfile('Daniel Taylor', 'DevOps Engineer', 'Experience with CI/CD pipelines...')">Daniel Taylor</li>
+        <li onclick="selectProfile('Sophia Anderson', 'Database Administrator', 'Proficient in SQL and NoSQL...')">Sophia Anderson</li>
+        <li onclick="selectProfile('Matthew Clark', 'Cybersecurity Analyst', 'Knowledge of network security...')">Matthew Clark</li>
+        <li onclick="selectProfile('Ava Rodriguez', 'Game Developer', 'Experience with Unity and Unreal Engine...')">Ava Rodriguez</li>
+        <li onclick="selectProfile('James Lee', 'Mobile App Developer', 'Specialized in iOS development...')">James Lee</li>
+        <li onclick="selectProfile('Lily Harris', 'UI/UX Designer', 'Passionate about creating intuitive user interfaces...')">Lily Harris</li>
+        <li onclick="selectProfile('Benjamin Turner', 'Software Architect', 'Expert in designing scalable systems...')">Benjamin Turner</li>
+        <li onclick="selectProfile('Chloe Walker', 'Frontend Developer', 'Skilled in Angular and TypeScript...')">Chloe Walker</li>
+        <li onclick="selectProfile('Samuel Green', 'Data Engineer', 'Experience with big data technologies...')">Samuel Green</li>
+        <li onclick="selectProfile('Grace Lewis', 'Cloud Architect', 'Knowledge of AWS and Azure...')">Grace Lewis</li>
+        <li onclick="selectProfile('Henry Hall', 'QA Engineer', 'Expert in test automation...')">Henry Hall</li>
+    </ul>
+</body>
+</html>

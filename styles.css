@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=League+Spartan:wght@100..900&display=swap");
+
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow-x: hidden;
+  margin: -10px;
+}
+
+.back {
+  border: 0px;
+  padding: 0px;
+  background: #101010;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(assets/MicrosoftTeams-image.png);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+h1{
+    text-align: center;
+    font-family: "Archivo", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: white;
+  
+}
+
+#faces {
+  width: 100%;
+  display: inline;
+  text-align: center;
+}
+
+#faces div {
+  padding: 4%;
+}
+
+.resize img {
+  margin-bottom: 80px;
+  margin: 20px;
+  width: 10%;
+}
+
+.circle img {
+  clip-path: circle(40%);
+}
+
+.circle img:hover {
+  clip-path: circle(45%);
+  animation-duration: 3s;
+}
+
+footer {
+  background-color: black;
+  height: 120px;
+  width: 100vw;
+}

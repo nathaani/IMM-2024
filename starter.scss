@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=League+Spartan:wght@100..900&display=swap');
+
+body {
+  font-family: "League Spartan", sans-serif;
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.container {
+  background: #101010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(images/cyberpunk-bg.jpeg);
+  background-position: center;
+  background-size: cover;
+  padding: 60px 30px;
+  min-height: 100vh;
+  height: 100%;
+  width: 100vw;
+  overflow-y: auto;
+  
+  &:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(#101010, 0.4);
+  }
+}
+
+@keyframes form-open {
+  0% {
+    clip-path: polygon(0 20px, 20px 0, 20px 0, 20px 0, 0 20px, 0 20px);
+  }
+  50% {
+    clip-path: polygon(0 20px, 20px 0, 20px 0, 20px calc(100% - 20px), 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(0 20px, 20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(-16px, 0, 0);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.profile-card {
+  display: flex;
+  // grid-gap: 9px;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  max-height: 300px;
+  width: 200%;
+  padding: 20px;
+  overflow: hidden;
+  clip-path: polygon(0 20px, 20px 0, 20px 0, 20px 0, 0 20px, 0 20px);
+  animation: form-open 1s cubic-bezier(0.4, 0.0, 0.2, 1) forwards 0.5s;
+  
+  > * {
+    position: relative;
+    opacity: 0;
+    animation: fade-in 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+  }
+  
+  > *:nth-child(2) {
+    animation-delay: 1.2s;
+  }
+  
+  > *:nth-child(3) {
+    animation-delay: 1.3s;
+  }
+  
+  > *:nth-child(4) {
+    animation-delay: 1.4s;
+  }
+  
+  > *:nth-child(5) {
+    animation-delay: 1.5s;
+  }
+  
+  > *:nth-child(6) {
+    animation-delay: 1.6s;
+  }
+}
+
+.form__image {
+  position: absolute;
+  animation: none;
+  opacity: 1;
+  filter: blur(16px);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  // height: 100vh;
+  background: 
+    linear-gradient(rgba(#101010, 0.8), rgba(#101010, 0.8)),      
+    url('images/cyberpunk-bg.jpeg');
+  background-position: center;
+  background-size: cover;
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+  gap:5px;
+}
+
+.form__logo {
+  width: 50%;
+  height: auto;
+  justify-self: center;
+}
+
+#desc {
+  // color: green;
+  height: 80px;
+}
+
+.text__element {
+  border: 0;
+  margin: 0;
+  height: 25px;
+  transition: box-shadow 0.4s ease;
+  padding-left: 10px;
+  color: rgba(white, 0.9);
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+
+// Button!
+
+.button {
+  background: #fdee06;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  height: 25px;
+  width: 200px;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+  text-transform: uppercase;
+  text-align: left;
+  padding: 0 20px;
+  cursor: pointer;
+  
+  &:focus {
+    outline: none;
+  }
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #22edfc;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+  }
+  
+  &:hover:before,
+  &:focus:before{
+    transform-origin: left center;
+    transform: scaleX(1);
+  }
+}
+
+.button:hover .button__icon,
+.button:focus .button__icon {
+  transform: translate3d(10px, -50%, 0);
+}
+
+.button__label {
+  position: relative;
+}
+
+.button__icon {
+  position: absolute;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  right: 25px;
+  width: 24px;
+  height: 24px;
+  transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+  
+  &:before {
+    content: '';
+    height: 1px;
+    width: 100%;
+    background: black;
+    position: absolute;
+    left: 0;
+    top: 12px;
+  }
+  
+  &:after {
+    content: '';
+    transform: rotate(45deg);
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    right: 0;
+    top: 8px;
+  }
+}
