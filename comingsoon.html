@@ -38,13 +38,18 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="manifest" href="assets/site.webmanifest">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
     <meta charset="utf-8" />
     <title>ZIM - - Code Creativity</title>
     <script type="module">
 
         import zim from "https://zimjs.org/cdn/016/zim";
 
-        const assets = ["2024.svg", "bg.png", "Coming.svg", "IMM.svg", "part1.svg", "part2.svg", "Soon.svg"];
+        const assets = ["2024.svg", "bg.png", "Coming.svg", "IMM.svg", "part1.svg", "part2.svg", "Soon.svg", "glitch1.svg", "glitch2.svg", "Glitch-Max.svg"];
         const path = "assets/";
 
 
@@ -53,17 +58,19 @@
             // Given F, S, W, H or frame, stage, stageW, stageH
             let size1 = 1;
             let size2 = 0.5;
-            new Rectangle(W, H, black).center().alp(0.6)
+            let size3 = 2;
+            new Rectangle(W, H, black).center().alp(0.2)
+            const particles3 = new SVG("part1.svg").centerReg().siz(W, H).alp(0.8).addTo();
+            const particles2 = new SVG("Glitch-Max.svg").centerReg().siz(W, H).mov(0, -10).alp(0.8).addTo();
 
-            const year0 = new SVG("2024.svg").sca(size2).pos(0, 260, CENTER, BOTTOM).mov(0, -10).alp(0.5);;
+            const year0 = new SVG("2024.svg").sca(size2).pos(0, 260, CENTER, BOTTOM).mov(0, -10).alp(0.5);
             const year = new SVG("2024.svg").sca(size2).pos(0, 260, CENTER, BOTTOM);
 
-            const imm0 = new SVG("IMM.svg").centerReg().sca(size1).center().mov(0, -10).alp(0.5);
+            const imm0 = new SVG("IMM.svg").centerReg().sca(0, 2).center().mov(0, -10).alp(0.9);
             const imm = new SVG("IMM.svg").sca(size1).center();
 
-            const particles3 = new SVG("part2.svg").sca(0.45).center();
-            const particles2 = new SVG("part2.svg").center();
-            const particles1 = new SVG("part1.svg").center();
+
+            const particles1 = new SVG("part1.svg").centerReg().alp(0.8).addTo();
 
             S.update();
             const parallax = new Parallax([
@@ -101,7 +108,7 @@
 
     <script defer>
         function selectProfile(name, role, desc, path) {
-            localStorage.setItem('profileInfo', JSON.stringify({ name, role, desc, path}));
+            localStorage.setItem('profileInfo', JSON.stringify({ name, role, desc, path }));
             window.location.href = 'profile.html'; // Make sure this is the correct path to your profile.html file
         }
     </script>
@@ -142,6 +149,7 @@
                         <img src="assets/portraits/Anitha N.jpg" alt>
                         <img src="assets/portraits/BEULA EVANGELIN.jpg" alt>
                         <img src="assets/portraits/Bill C.jpg" alt>
+                        <img src="assets/portraits/Casey.jpg" alt="">
                         <img src="assets/portraits/ChaiRay Huo.jpg" alt>
                         <img src="assets/portraits/Chirag Taluja.jpeg" alt>
                         <img src="assets/portraits/Lifei Zhou.jpeg" alt>
@@ -149,6 +157,8 @@
                         <img src="assets/portraits/Sai Kumar Gottapu.jpg" alt>
                         <img src="assets/portraits/Sanchita Sharma.jpg" alt>
                         <img src="assets/portraits/Siyeong Jeong.jpg" alt>
+                        <img src="assets/portraits/Sonia.jpg" alt="">
+                        <img src="assets/portraits/Srivatsan Rangarajan.jpg" alt="">
                         <img src="assets/portraits/wan wan.jpg" alt>
                     </div>
                 </div>
