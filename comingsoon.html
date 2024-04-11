@@ -103,6 +103,12 @@
 
         } // end ready
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <style>
+        .circle img {
+            opacity: 0; /* Start images as invisible */
+        }
+    </style>
     <meta name="viewport" content="width=device-width, user-scalable=no" />
     <link rel="stylesheet" href="styles.css">
 
@@ -144,18 +150,22 @@
             <section id="faces">
                 <div class="resize">
                     <div class="circle">
-                        <img onclick="selectProfile('Amruta Vaze', 'Produce Manager, UX Designer', 'I craft engaging user experiences and innovative marketing strategies, weaving brand narratives seamlessly across touchpoints, resonating with audiences and strengthening brand identities.', 'assets/portraits/Amruta Vaze.jpg', 'www.amrutavaze.com')"
-                            src="assets/portraits/Amruta Vaze.jpg" alt>
+                        <img onclick="selectProfile('Alexis Santa Ana', 'UX Designer, Game Designer, Narrative Writer', 'Innovating with a blend of tradition and novelty, I aim to fuse coding, art, and storytelling for vibrant and thrilling projects!', 'assets/portraits/Alexis.jpg', 'www.alexisgsantaana.com')" src="assets/portraits/Alexis.jpg" alt>
                         <img onclick="selectProfile('Anitha Nathan', 'Creative Coder, UX Designer', 'Experienced in coding, web design, and research, I blend creativity with technology to enhance user experiences. Skilled in web development, digital marketing training, and user studies, my work integrates creativity and technology.', 'assets/portraits/Anitha N.jpg', 'www.anitha-nathan.com')" src="assets/portraits/Anitha N.jpg" alt>
+                        <img onclick="selectProfile('Ashley', 'UX Designer', 'I am Ashley!', 'assets/portraits/Ashley.jpg', 'www.ashley.com')" src="assets/portraits/Ashley.jpg" alt="">
                         <img onclick="selectProfile('Beula Evangelin', 'UX Designer, Business Analyst', 'Animation grad pursuing Interactive Multimedia, passionate about pixels and code. Expertise in UI/UX design and front-end programming. Creating engaging user experiences and driving strategic decisions for impactful solutions.', 'assets/portraits/BEULA EVANGELIN.jpg', 'www.beulaevangelin.com')" src="assets/portraits/BEULA EVANGELIN.jpg" alt>
                         <img onclick="selectProfile('Bill Cao', 'UX Designer, Product Manager, Product Sales Manager', 'Passionate about web tech advancing society. Bring convenience, organization to smartphone users, connecting them globally.', 'assets/portraits/Bill C.jpg', 'www.linkedin.com/in/cao-bill/')" src="assets/portraits/Bill C.jpg" alt>
+                        <img onclick="selectProfile('Casey Anetor', 'Full Stack Developer', 'Passionate developer, and designer with over 2 years of full-stack development experience. Outside tech, I enjoy soccer, cooking, binge watching series, and seeking new adventures.', 'assets/portraits/Casey.jpg', 'www.caseyae.com')" src="assets/portraits/Casey.jpg" alt="">
                         <img onclick="selectProfile('ChaiRay Huo', 'Product Manager', 'Tech Product Manager, Commercial Video Producer & Start-up Founder with 10 years of interactive media project management experience. Rapid Learner, Communication Artist & Problem-Solving Expertise.', 'assets/portraits/ChaiRay Huo.jpg', 'www.chairayhuo.com/')" src="assets/portraits/ChaiRay Huo.jpg" alt>
                         <img onclick="selectProfile('Chirag Taluja', 'Frontend Developer', 'I make divs for a living.', 'assets/portraits/Chirag Taluja.jpeg', 'www.chiragtaluja.netlify.app/projects')" src="assets/portraits/Chirag Taluja.jpeg" alt>
+                        <img onclick="selectProfile('Gloria Cao', 'Product Designer', 'Passionate UI/UX Product Designer with a focus on animation, bringing digital experiences to life through a seamless blend of design and dynamic motion.', 'assets/portraits/Gloria Cao.JPG', 'www.gloriacao.com')" src="assets/portraits/Gloria Cao.JPG" alt="">
                         <img onclick="selectProfile('Lifei Zhou', 'Technical Copywriter', 'Copywriter in Cross-Border Entrepreneurship, blogging since 2014. Sheridan College study boosted web dev skills, aiding global connections.', 'assets/portraits/Lifei Zhou.jpeg', 'www.chenfei.cn/')" src="assets/portraits/Lifei Zhou.jpeg" alt>
                         <img onclick="selectProfile('Maha Elbatal', 'UI/UX Designer', 'Coding Classrooms and Crafting Websites through Education and Innovation', 'assets/portraits/Maha Al Batal.jpg', 'www.mahaelbatal.com')" src="assets/portraits/Maha Al Batal.jpg" alt>
                         <img onclick="selectProfile('Sai Kumar Gottapu', 'UX Designer', 'Designer by day, pixel whisperer by night, Where design meets impact. I blend creativity & tech-savviness to bring digital dreams to life.', 'assets/portraits/Sai Kumar Gottapu.jpg', 'www.imsaikumar.framer.website/')" src="assets/portraits/Sai Kumar Gottapu.jpg" alt>
                         <img onclick="selectProfile('Sanchita Sharma', 'UX Designer', 'Seasoned UX designer with 3 years of experience in UX, and a solid architectural background with over 8 years of industry expertise.', 'assets/portraits/Sanchita Sharma.jpg', 'www.linkedin.com/in/sanchitasharma/')" src="assets/portraits/Sanchita Sharma.jpg" alt>
                         <img onclick="selectProfile('Siyeong Jeong', 'Frontend Developer, UXUI Designer, Project Manager, Product Designer', 'Transitioning from graphic design, now excel in front-end development, product design, and project management. Passionate about crafting dynamic, user-friendly web interfaces.', 'assets/portraits/Siyeong Jeong.jpg', 'www.siyeong.com')" src="assets/portraits/Siyeong Jeong.jpg" alt>
+                        <img onclick="selectProfile('Sonia', 'MISSING', 'MISSING', 'assets/portraits/Sonia.jpg', 'www.google.com')" src="assets/portraits/Sonia.jpg" alt="">
+                        <img onclick="selectProfile('Srivatsan Rangarajan', 'UX, Learning, and Game Designer', '9yrs in instructional design & game dev for online courses, led teams of 20, worked with clients in US, Canada, UK.', 'assets/portraits/Srivatsan Rangarajan.jpg', 'www.srivatsanrangarajan.com')" src="assets/portraits/Srivatsan Rangarajan.jpg" alt="">
                         <img onclick="selectProfile('Wanlin Li', 'Experiential Design, Interaction Design, Creative Concept Design', 'Versatile digital product designer skilled in web design, UX, and programming. Passionate about crafting captivating visual projects with empathy and deep human understanding. Background in architecture and project management enriches design approach. Focused on delivering impactful user experiences through creative design and prototyping.', 'assets/portraits/wan wan.jpg', 'www.wanwancoolgirl.com/')" src="assets/portraits/wan wan.jpg" alt>
                     </div>
                 </div>
@@ -165,6 +175,16 @@
     <footer>
 
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.to(".circle img", {
+                duration: 0.5, 
+                opacity: 1, 
+                // stagger: 0.2, 
+                ease: "linear"
+            });
+        });
+    </script>
 </body>
 
 </html>

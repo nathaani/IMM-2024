@@ -52,6 +52,7 @@ h1{
 
 .circle img {
   clip-path: circle(40%);
+  cursor: pointer;
 }
 
 .circle img:hover {
