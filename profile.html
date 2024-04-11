@@ -13,7 +13,9 @@
             document.getElementById('role').textContent = profileInfo.role;
             document.getElementById('desc').textContent = profileInfo.desc;
             document.getElementById('path').src = profileInfo.path;
-            document.getElementById('link').onclick = profileInfo.link;
+            document.getElementById('link').onclick = function(){
+              window.location.href = 'https://' + profileInfo.link;
+            }
         } else {
             // Handle case where no profileInfo is available (e.g., direct access to this page)
             document.getElementById('profile-card').innerHTML = '<p>No profile selected. Please go back to the selection page.</p>';
