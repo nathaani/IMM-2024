@@ -13,6 +13,10 @@
             document.getElementById('role').textContent = profileInfo.role;
             document.getElementById('desc').textContent = profileInfo.desc;
             document.getElementById('path').src = profileInfo.path;
+            document.getElementById('link').onclick = function(){
+              let site = 'https://' + profileInfo.link;
+              window.open(site, '_blank');
+            }
         } else {
             // Handle case where no profileInfo is available (e.g., direct access to this page)
             document.getElementById('profile-card').innerHTML = '<p>No profile selected. Please go back to the selection page.</p>';
@@ -33,7 +37,7 @@
           <p id="desc" class="text__element">
             9yrs in instructional design & game dev for online courses, led teams of 20, worked with clients in US, Canada, UK.</p>
         </div>
-        <button type="button" class="button" onclick="window.location.href = 'profile.html'">
+        <button id="link" type="button" class="button">
           <div class="button__label">View Portfolio</div>
           <div class="button__icon"></div>
         </button>
