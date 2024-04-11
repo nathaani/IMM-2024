@@ -100,8 +100,8 @@
     <link rel="stylesheet" href="styles.css">
 
     <script defer>
-        function selectProfile(name, role, desc, path) {
-            localStorage.setItem('profileInfo', JSON.stringify({ name, role, desc, path}));
+        function selectProfile(name, role, desc, path, link) {
+            localStorage.setItem('profileInfo', JSON.stringify({ name, role, desc, path, link}));
             window.location.href = 'profile.html'; 
         }
     </script>
@@ -137,28 +137,24 @@
             <section id="faces">
                 <div class="resize">
                     <div class="circle">
-                        <img onclick="selectProfile('Amruta Vaze', 'UX Researcher', '9yrs in instructional design...', 'assets/portraits/Amruta Vaze.jpg')"
+                        <img onclick="selectProfile('Amruta Vaze', 'Produce Manager, UX Designer', 'I craft engaging user experiences and innovative marketing strategies, weaving brand narratives seamlessly across touchpoints, resonating with audiences and strengthening brand identities.', 'assets/portraits/Amruta Vaze.jpg', 'www.siyeong.com')"
                             src="assets/portraits/Amruta Vaze.jpg" alt>
-                        <img onclick="selectProfile('Anitha Nathan', 'UX Researcher', '9yrs in instructional design...', 'assets/portraits/Anitha N.jpg')" src="assets/portraits/Anitha N.jpg" alt>
-                        <img onclick="selectProfile('Beula Evangelin', 'UX Researcher', '9yrs in instructional design...', 'assets/portraits/BEULA EVANGELIN.jpg')" src="assets/portraits/BEULA EVANGELIN.jpg" alt>
-                        <img onclick="selectProfile('Bill C', 'UX Researcher', '9yrs in instructional design...', 'assets/portraits/Bill C.jpg')" src="assets/portraits/Bill C.jpg" alt>
-                        <img onclick="selectProfile('ChaiRay Huo', 'UX Researcher', '9yrs in instructional design...', 'assets/portraits/ChaiRay Huo.jpg')" src="assets/portraits/ChaiRay Huo.jpg" alt>
-                        <img onclick="selectProfile('Chirag Taluja', 'UX Researcher', '9yrs in instructional design...', 'assets/portraits/Chirag Taluja.jpeg')" src="assets/portraits/Chirag Taluja.jpeg" alt>
-                        <img onclick="selectProfile('Lifei Zhou', 'UX Researcher', '9yrs in instructional design...', 'assets/portraits/Lifei Zhou.jpeg')" src="assets/portraits/Lifei Zhou.jpeg" alt>
-                        <img onclick="selectProfile('Maha Al Batal', 'UX Researcher', '9yrs in instructional design...', 'assets/portraits/Maha Al Batal.jpg')" src="assets/portraits/Maha Al Batal.jpg" alt>
-                        <img onclick="selectProfile('Sai Kumar Gottapu', 'UX Researcher', '9yrs in instructional design...', 'assets/portraits/Sai Kumar Gottapu.jpg')" src="assets/portraits/Sai Kumar Gottapu.jpg" alt>
-                        <img onclick="selectProfile('Sanchita Sharma', 'UX Researcher', '9yrs in instructional design...', 'assets/portraits/Sanchita Sharma.jpg')" src="assets/portraits/Sanchita Sharma.jpg" alt>
-                        <img onclick="selectProfile('Siyeong Jeong', 'UX Researcher', '9yrs in instructional design...', 'assets/portraits/Siyeong Jeong.jpg')" src="assets/portraits/Siyeong Jeong.jpg" alt>
-                        <img onclick="selectProfile('Wan Lin', 'UX Researcher', '9yrs in instructional design...', 'assets/portraits/wan wan.jpg')" src="assets/portraits/wan wan.jpg" alt>
+                        <img onclick="selectProfile('Anitha Nathan', 'Creative Coder, UX Designer', 'Experienced in coding, web design, and research, I blend creativity with technology to enhance user experiences. Skilled in web development, digital marketing training, and user studies, my work integrates creativity and technology.', 'assets/portraits/Anitha N.jpg', 'www.anitha-nathan.com')" src="assets/portraits/Anitha N.jpg" alt>
+                        <img onclick="selectProfile('Beula Evangelin', 'UX Designer, Business Analyst', 'Animation grad pursuing Interactive Multimedia, passionate about pixels and code. Expertise in UI/UX design and front-end programming. Creating engaging user experiences and driving strategic decisions for impactful solutions.', 'assets/portraits/BEULA EVANGELIN.jpg', 'www.beulaevangelin.com')" src="assets/portraits/BEULA EVANGELIN.jpg" alt>
+                        <img onclick="selectProfile('Bill Cao', 'UX Designer, Product Manager, Product Sales Manager', 'Passionate about web tech advancing society. Bring convenience, organization to smartphone users, connecting them globally.', 'assets/portraits/Bill C.jpg', 'www.linkedin.com/in/cao-bill/')" src="assets/portraits/Bill C.jpg" alt>
+                        <img onclick="selectProfile('ChaiRay Huo', 'Product Manager', 'Tech Product Manager, Commercial Video Producer & Start-up Founder with 10 years of interactive media project management experience. Rapid Learner, Communication Artist & Problem-Solving Expertise.', 'assets/portraits/ChaiRay Huo.jpg', 'www.chairayhuo.com/')" src="assets/portraits/ChaiRay Huo.jpg" alt>
+                        <img onclick="selectProfile('Chirag Taluja', 'Frontend Developer', 'I make divs for a living.', 'assets/portraits/Chirag Taluja.jpeg', 'www.chiragtaluja.netlify.app/projects')" src="assets/portraits/Chirag Taluja.jpeg" alt>
+                        <img onclick="selectProfile('Lifei Zhou', 'Technical Copywriter', 'Copywriter in Cross-Border Entrepreneurship, blogging since 2014. Sheridan College study boosted web dev skills, aiding global connections.', 'assets/portraits/Lifei Zhou.jpeg', 'www.chenfei.cn/')" src="assets/portraits/Lifei Zhou.jpeg" alt>
+                        <img onclick="selectProfile('Maha Elbatal', 'UI/UX Designer', 'Coding Classrooms and Crafting Websites through Education and Innovation', 'assets/portraits/Maha Al Batal.jpg', 'www.mahaelbatal.com')" src="assets/portraits/Maha Al Batal.jpg" alt>
+                        <img onclick="selectProfile('Sai Kumar Gottapu', 'UX Designer', 'Designer by day, pixel whisperer by night, Where design meets impact. I blend creativity & tech-savviness to bring digital dreams to life.', 'assets/portraits/Sai Kumar Gottapu.jpg', 'www.imsaikumar.framer.website/')" src="assets/portraits/Sai Kumar Gottapu.jpg" alt>
+                        <img onclick="selectProfile('Sanchita Sharma', 'UX Designer', 'Seasoned UX designer with 3 years of experience in UX, and a solid architectural background with over 8 years of industry expertise.', 'assets/portraits/Sanchita Sharma.jpg', 'www.linkedin.com/in/sanchitasharma/')" src="assets/portraits/Sanchita Sharma.jpg" alt>
+                        <img onclick="selectProfile('Siyeong Jeong', 'Frontend Developer, UXUI Designer, Project Manager, Product Designer', 'Transitioning from graphic design, now excel in front-end development, product design, and project management. Passionate about crafting dynamic, user-friendly web interfaces.', 'assets/portraits/Siyeong Jeong.jpg', 'www.siyeong.com')" src="assets/portraits/Siyeong Jeong.jpg" alt>
+                        <img onclick="selectProfile('Wanlin Li', 'Experiential Design, Interaction Design, Creative Concept Design', 'Versatile digital product designer skilled in web design, UX, and programming. Passionate about crafting captivating visual projects with empathy and deep human understanding. Background in architecture and project management enriches design approach. Focused on delivering impactful user experiences through creative design and prototyping.', 'assets/portraits/wan wan.jpg', 'www.wanwancoolgirl.com/')" src="assets/portraits/wan wan.jpg" alt>
                     </div>
                 </div>
             </section>
-
         </div>
-
-
     </main>
-
     <footer>
 
     </footer>
