@@ -14,7 +14,8 @@
             document.getElementById('desc').textContent = profileInfo.desc;
             document.getElementById('path').src = profileInfo.path;
             document.getElementById('link').onclick = function(){
-              window.location.href = 'https://' + profileInfo.link;
+              let site = 'https://' + profileInfo.link;
+              window.open(site, '_blank');
             }
         } else {
             // Handle case where no profileInfo is available (e.g., direct access to this page)
