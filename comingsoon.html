@@ -113,8 +113,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <script defer>
-        function selectProfile(name, role, desc, path, link) {
-            localStorage.setItem('profileInfo', JSON.stringify({ name, role, desc, path, link}));
+        function selectProfile(name, role, desc, path, link, linkedin) {
+            localStorage.setItem('profileInfo', JSON.stringify({ name, role, desc, path, link, linkedin}));
             window.location.href = 'profile.html'; 
         }
     </script>
@@ -148,11 +148,11 @@
                 <div class="resize">
                     <div class="circle">
                         <div class="profile1">
-                            <img onclick="selectProfile('Alexis Santa Ana', 'UX Designer, Game Designer, Narrative Writer', 'Innovating with a blend of tradition and novelty, I aim to fuse coding, art, and storytelling for vibrant and thrilling projects!', 'assets/portraits/Alexis.jpg', 'www.alexisgsantaana.com')" src="assets/portraits/Alexis.jpg" alt>
+                            <img onclick="selectProfile('Alexis Santa Ana', 'UX Designer, Game Designer, Narrative Writer', 'Embarking on the vibrant world of Interactive Media at Sheridan, where I fuse coding, art, and storytelling for thrilling projects!', 'assets/portraits/Alexis.jpg', 'www.alexisgsantaana.com')" src="assets/portraits/Alexis.jpg" alt>
                             <p>Alexis Santa Ana</p>
                         </div>
                         <div class="profile1">
-                            <img onclick="selectProfile('Anitha Nathan', 'Creative Coder, UX Designer', 'Experienced in coding, web design, and research, I blend creativity with technology to enhance user experiences. Skilled in web development, digital marketing training, and user studies, my work integrates creativity and technology.', 'assets/portraits/Anitha N.jpg', 'www.anitha-nathan.com')" src="assets/portraits/Anitha N.jpg" alt>
+                            <img onclick="selectProfile('Anitha Nathan', 'Creative Coder, UX Designer', 'Creative tech enthusiast specializing in coding, web design, and research to enhance UX. Expert in website development, digital marketing training, and user studies.', 'assets/portraits/Anitha N.jpg', 'www.anitha-nathan.com')" src="assets/portraits/Anitha N.jpg" alt>
                             <p>Anitha Nathan</p>
                         </div>
                         <div class="profile1">
@@ -160,7 +160,7 @@
                             <p>Ashley</p>
                         </div>
                         <div class="profile1">
-                            <img onclick="selectProfile('Beula Evangelin', 'UX Designer, Business Analyst', 'Animation grad pursuing Interactive Multimedia, passionate about pixels and code. Expertise in UI/UX design and front-end programming. Creating engaging user experiences and driving strategic decisions for impactful solutions.', 'assets/portraits/BEULA EVANGELIN.jpg', 'www.beulaevangelin.com')" src="assets/portraits/BEULA EVANGELIN.jpg" alt>
+                            <img onclick="selectProfile('Beula Evangelin', 'UX Designer, Business Analyst', 'Animation grad with a passion for pixels and code, skilled in UI/UX design and front-end programming. Aiming to create engaging experiences and drive business impact.', 'assets/portraits/BEULA EVANGELIN.jpg', 'www.beulaevangelin.com')" src="assets/portraits/BEULA EVANGELIN.jpg" alt>
                             <p>Beula Evangelin</p>
                         </div>
                         <div class="profile1">
@@ -168,7 +168,7 @@
                             <p>Bill Cao</p>
                         </div>
                         <div class="profile2">
-                            <img onclick="selectProfile('Casey Anetor', 'Full Stack Developer', 'Passionate developer, and designer with over 2 years of full-stack development experience. Outside tech, I enjoy soccer, cooking, binge watching series, and seeking new adventures.', 'assets/portraits/Casey.jpg', 'www.caseyae.com')" src="assets/portraits/Casey.jpg" alt="">
+                            <img onclick="selectProfile('Casey Anetor', 'Full Stack Developer', 'Passionate developer and designer with over 2 years of full-stack development experience who enjoys soccer, cooking, binge watching, and new adventures.', 'assets/portraits/Casey.jpg', 'www.caseyae.com')" src="assets/portraits/Casey.jpg" alt="">
                             <p>Casey Anetor</p>
                         </div>
                         <div class="profile2">
@@ -212,7 +212,7 @@
                             <p>Srivatsan Rangarajan</p>
                         </div>
                         <div class="profile4">
-                            <img onclick="selectProfile('Wanlin Li', 'Experiential Design, Interaction Design, Creative Concept Design', 'Versatile digital product designer skilled in web design, UX, and programming. Passionate about crafting captivating visual projects with empathy and deep human understanding. Background in architecture and project management enriches design approach. Focused on delivering impactful user experiences through creative design and prototyping.', 'assets/portraits/wan wan.jpg', 'www.wanwancoolgirl.com/')" src="assets/portraits/wan wan.jpg" alt>
+                            <img onclick="selectProfile('Wanlin Li', 'Experiential Design, Interaction Design, Creative Concept Design', 'Digital product designer with a blend of web design, UX, and programming. Passionate about creating impactful experiences through empathy and innovation.', 'assets/portraits/wan wan.jpg', 'www.wanwancoolgirl.com/')" src="assets/portraits/wan wan.jpg" alt>
                             <p>Wanlin Li</p>
                         </div>
                     </div>
