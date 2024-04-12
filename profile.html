@@ -17,7 +17,9 @@
               let site = 'https://' + profileInfo.link;
               window.open(site, '_blank');
             }
-            document.getElementById('linkedin').href = profileInfo.linkedin;
+            let linkedinLink = 'https://' + profileInfo.linkedin;
+            document.getElementById('linkedin').href = linkedinLink;
+            console.log(profileInfo);
         } else {
             // hello, future imm students. How's it going?
             document.getElementById('profile-card').innerHTML = '<p>No profile selected. Please go back to the selection page.</p>';
@@ -38,7 +40,7 @@
           <p id="desc" class="text__element">
             9yrs in instructional design & game dev for online courses, led teams of 20, worked with clients in US, Canada, UK.</p>
         </div>
-        <a id="linkedin" href="$LINKEDIN_PROFILE_LINK$" target="_blank"><img id="linkedin-icon" src="assets/linkedin.png" alt="linkedin icon"></a>
+        <a id="linkedin" href="" target="_blank"><img id="linkedin-icon" src="assets/linkedin.png" alt="linkedin icon"></a>
         <button id="link" type="button" class="button">
           <div class="button__label">View Portfolio</div>
           <div class="button__icon"></div>
