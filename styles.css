@@ -51,9 +51,9 @@ h1{
 }
 
 .circle {
-  /* display: grid;
+   display: grid;
   column-gap: 25px;
-  row-gap: 25px; */
+  row-gap: 25px; 
   justify-content: center;
   align-items: center;
   text-align: center;
