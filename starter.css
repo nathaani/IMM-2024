@@ -227,3 +227,57 @@ body {
   right: 0;
   top: 8px;
 }/*# sourceMappingURL=starter.css.map */
+
+
+@media (max-width: 840px) {
+  /* Your CSS code for screens less than 840px wide goes here */
+  .profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
+    max-height: 2000px;
+    width: 100%;
+    /* padding: 20px; */
+    overflow: hidden;
+    -webkit-clip-path: polygon(0 20px, 20px 0, 20px 0, 20px 0, 0 20px, 0 20px);
+            clip-path: polygon(0 20px, 20px 0, 20px 0, 20px 0, 0 20px, 0 20px);
+    animation: form-open 1s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.5s;
+  }
+  #name{
+    font-size: 20px;
+    color: #fdee06;
+  }
+  .text__element {
+    border: 0;
+    margin: 0;
+    height: 10px;
+    transition: box-shadow 0.4s ease;
+    padding-left: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form__logo {
+    width: 20rem;
+    height: 18rem;
+    padding-top: 0px;
+    margin-top: 0px;
+    height: 20rem;
+    justify-self: center;
+    object-fit:scale-down;
+  }
+  
+  #desc {
+    height: 40px;
+    /* display: none; */
+  }
+}
