@@ -7,6 +7,14 @@
   <script src="starter.js" defer></script>
   <script defer>
     document.addEventListener('DOMContentLoaded', () => {
+        const profileCard = document.querySelector('.profile-card');
+        console.log(profileCard);
+        document.addEventListener('click', (event) => {
+          if (!profileCard.contains(event.target)) {
+            window.history.back();
+            console.log('clicked outside');
+          }
+        });
         const profileInfo = JSON.parse(localStorage.getItem('profileInfo'));
         if (profileInfo) {
             document.getElementById('name').textContent = profileInfo.name;
@@ -22,7 +30,7 @@
             console.log(profileInfo);
         } else {
             // hello, future imm students. How's it going?
-            document.getElementById('profile-card').innerHTML = '<p>No profile selected. Please go back to the selection page.</p>';
+            profileCard.innerHTML = '<p>No profile selected. Please go back to the selection page.</p>';
         }
     });
 </script>
@@ -33,19 +41,19 @@
     <section class="profile-card">
       <div class="form__image"></div>
       <img id="path" class="form__logo" alt="IMM 2024 Logo">
-      <section class="about">
-        <div> 
-          <h2 id="name" class="text__element">Srivatsan</h2>
-          <h3 id="role" class="text__element">Instructional Designer</h3>
-          <p id="desc" class="text__element">
-            9yrs in instructional design & game dev for online courses, led teams of 20, worked with clients in US, Canada, UK.</p>
-        </div>
-        <a id="linkedin" href="" target="_blank"><img id="linkedin-icon" src="assets/linkedin.png" alt="linkedin icon"></a>
-        <button id="link" type="button" class="button">
-          <div class="button__label">View Portfolio</div>
-          <div class="button__icon"></div>
-        </button>
-    </section>
+        <section class="about">
+          <div> 
+            <h2 id="name" class="text__element">Srivatsan</h2>
+            <h3 id="role" class="text__element">Instructional Designer</h3>
+            <p id="desc" class="text__element">
+              9yrs in instructional design & game dev for online courses, led teams of 20, worked with clients in US, Canada, UK.</p>
+          </div>
+          <a id="linkedin" href="" target="_blank"><img id="linkedin-icon" src="assets/linkedin.png" alt="linkedin icon"></a>
+          <button id="link" type="button" class="button">
+            <div class="button__label">View Portfolio</div>
+            <div class="button__icon"></div>
+          </button>
+      </section>
     </section>
   </main>
 </body>
